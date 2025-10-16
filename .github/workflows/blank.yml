@@ -1,4 +1,4 @@
-name: Build My_Sun for Mac
+name: Build HNO_Sun for Mac
 
 on:
   push:
@@ -22,10 +22,10 @@ jobs:
         run: pip install pyinstaller
       
       - name: Build Mac App
-        run: pyinstaller --onefile --windowed --name "My_Sun" b.py
+        run: pyinstaller --onefile --windowed --icon=sun.ico --name "HNO_Sun" b.py
       
       - name: Upload Mac App
         uses: actions/upload-artifact@v4
         with:
           name: My_Sun-macOS
-          path: dist/My_Sun
+          path: dist/HNO_Sun
