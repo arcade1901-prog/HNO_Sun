@@ -1,4 +1,4 @@
-name: Build My_Sun for Mac
+name: Build HNO_Sun for Mac
 
 on:
   push:
@@ -27,5 +27,5 @@ jobs:
       - name: Upload Mac App
         uses: actions/upload-artifact@v4
         with:
-          name: My_Sun-macOS
-          path: dist/My_Sun
+          name: HNO_Sun-macOS
+          path: dist/HNO_Sun
