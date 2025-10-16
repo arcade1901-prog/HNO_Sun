@@ -1,4 +1,4 @@
-name: Build HNO_Sun for Mac
+name: Build My_Sun for Mac
 
 on:
   push:
@@ -11,21 +11,21 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
       
       - name: Install PyInstaller
         run: pip install pyinstaller
       
       - name: Build Mac App
-        run: pyinstaller --onefile --windowed --icon=sun.ico --name "HNO_Sun" b.py
+        run: pyinstaller --onefile --windowed --name "My_Sun" b.py
       
       - name: Upload Mac App
         uses: actions/upload-artifact@v4
         with:
           name: My_Sun-macOS
-          path: dist/HNO_Sun
+          path: dist/My_Sun
